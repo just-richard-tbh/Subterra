@@ -1,0 +1,69 @@
+{
+  "type": "subterra:subterra",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "subterra:subterra",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "subterra:overgrowth",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": -2,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "subterra:fungal_caverns",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": [
+              -0.25,
+              0.33
+            ],
+            "offset": 0
+          }
+        },
+        {
+          "biome": "subterra:core",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": [
+              0.5,
+              2.0
+            ],
+            "offset": 0
+          }
+        },
+        {
+          "biome": "subterra:crystalline_sea",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": [
+              1.5,
+              2
+            ],
+            "offset": 0
+          }
+        }
+      ]
+    }
+  }
+}
