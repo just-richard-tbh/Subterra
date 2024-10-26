@@ -222,12 +222,16 @@ public class AlloyFurnaceBlockEntity extends LootableContainerBlockEntity
         }
     }
 
+    public static void addRecipe(Map<Collection<Item>, Item> map, Item ingredient1, Item ingredient2, Item result){
+        Collection<Item> collection = List.of(ingredient1, ingredient2);
+        map.put(collection, result);
+        collection = List.of(ingredient2, ingredient1);
+        map.put(collection, result);
+    }
+
     public static Map<Collection<Item>, Item> createRecipes(){
         Map<Collection<Item>, Item> recipeMap = new LinkedHashMap<>();
-        Collection<Item> coll = List.of(Items.IRON_INGOT, Items.COAL);
-        recipeMap.put(coll, ModItems.STEEL_INGOT);
-        coll = List.of(Items.COAL, Items.IRON_INGOT);
-        recipeMap.put(coll, ModItems.STEEL_INGOT);
+        addRecipe(recipeMap, Items.COAL, Items.IRON_INGOT, ModItems.STEEL_INGOT);
         return recipeMap;
     }
 

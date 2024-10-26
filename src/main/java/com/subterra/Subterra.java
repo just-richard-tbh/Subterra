@@ -9,6 +9,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.block.Blocks;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
@@ -35,11 +36,23 @@ public class Subterra implements ModInitializer {
 							entries.add(ModBlocks.ALLOY_FURNACE_BLOCK);
 							entries.add(ModItems.STEEL_INGOT);
 							entries.add(ModItems.GRAPES);
+							entries.add(ModBlocks.CRYSLATE_BLOCK);
+							entries.add(ModBlocks.COBBLED_CRYSLATE);
+							entries.add(ModBlocks.COBBLED_CRYSLATE_SLAB);
+							entries.add(ModBlocks.COBBLED_CRYSLATE_STAIRS);
+							entries.add(ModBlocks.CRYSLATE_BRICKS);
+							entries.add(ModBlocks.CRACKED_CRYSLATE_BRICKS);
+							entries.add(ModBlocks.CRYSLATE_TILES);
+							entries.add(ModBlocks.CRACKED_CRYSLATE_TILES);
+							entries.add(ModBlocks.CRYSLATE_PILLAR);
+							entries.add(ModBlocks.CRACKED_CRYSLATE_PILLAR);
+							entries.add(ModBlocks.CHISELED_CRYSLATE_BRICKS);
+							entries.add(ModBlocks.CRACKED_CHISELED_CRYSLATE_BRICKS);
 						}).build());
 		CustomPortalBuilder.beginPortal()
-				.frameBlock(Blocks.DEEPSLATE)
+				.frameBlock(Blocks.CRYING_OBSIDIAN)
 				.destDimID(Identifier.of("subterra", "subterra"))
-				.lightWithItem(Items.ECHO_SHARD)
+				.lightWithFluid(Fluids.LAVA)
 				.registerPortal();
 
 

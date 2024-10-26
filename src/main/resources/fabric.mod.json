@@ -3,13 +3,13 @@
 	"id": "subterra",
 	"version": "${version}",
 	"name": "subterra",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Explore a whole new world full of ores, mobs, structures, biomes and much, much more!",
 	"authors": [
-		"Me!"
+		"Just Richard, to be honest"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/just-richard-tbh/Subterra"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/subterra/icon.png",
