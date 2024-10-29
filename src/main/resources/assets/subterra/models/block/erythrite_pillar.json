@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "subterra:block/erythrite_pillar_top",
+    "side": "subterra:block/erythrite_pillar"
+  }
+}

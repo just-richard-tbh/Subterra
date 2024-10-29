@@ -69,25 +69,19 @@ public class ModBlocks {
             strength(CRYSLATE_BRICK_STRENGTH).
             sounds(BlockSoundGroup.DEEPSLATE)
     );
-    public static final Block CHISELED_CRYSLATE_BRICKS = new Block(AbstractBlock.Settings.create().
+    public static final Block CHISELED_CRYSLATE = new Block(AbstractBlock.Settings.create().
             mapColor(MapColor.DARK_DULL_PINK).
             requiresTool().
             strength(CRYSLATE_BRICK_STRENGTH).
             sounds(BlockSoundGroup.DEEPSLATE)
     );
-    public static final Block CRACKED_CHISELED_CRYSLATE_BRICKS = new Block(AbstractBlock.Settings.create().
+    public static final Block CRACKED_CHISELED_CRYSLATE = new Block(AbstractBlock.Settings.create().
             mapColor(MapColor.DARK_DULL_PINK).
             requiresTool().
             strength(CRYSLATE_BRICK_STRENGTH).
             sounds(BlockSoundGroup.DEEPSLATE)
     );
     public static final Block CRYSLATE_PILLAR = new PillarBlock(AbstractBlock.Settings.create().
-            mapColor(MapColor.DARK_DULL_PINK).
-            requiresTool().
-            strength(CRYSLATE_BRICK_STRENGTH).
-            sounds(BlockSoundGroup.DEEPSLATE)
-    );
-    public static final Block CRACKED_CRYSLATE_PILLAR = new PillarBlock(AbstractBlock.Settings.create().
             mapColor(MapColor.DARK_DULL_PINK).
             requiresTool().
             strength(CRYSLATE_BRICK_STRENGTH).
@@ -129,9 +123,8 @@ public class ModBlocks {
         registerBlock("cracked_cryslate_tiles", CRACKED_CRYSLATE_TILES);
         registerBlock("cracked_cryslate_bricks", CRACKED_CRYSLATE_BRICKS);
         registerBlock("cryslate_pillar", CRYSLATE_PILLAR);
-        registerBlock("cracked_cryslate_pillar", CRACKED_CRYSLATE_PILLAR);
-        registerBlock("chiseled_cryslate_bricks", CHISELED_CRYSLATE_BRICKS);
-        registerBlock("cracked_chiseled_cryslate_bricks", CRACKED_CHISELED_CRYSLATE_BRICKS);
+        registerBlock("chiseled_cryslate_bricks", CHISELED_CRYSLATE);
+        registerBlock("cracked_chiseled_cryslate_bricks", CRACKED_CHISELED_CRYSLATE);
         registerBlock("mantle_rock", MANTLE_BLOCK);
         registerBlock("grape_bush", GRAPE_BUSH);
     }

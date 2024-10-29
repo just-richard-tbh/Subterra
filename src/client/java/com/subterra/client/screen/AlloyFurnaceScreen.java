@@ -11,7 +11,7 @@ import net.minecraft.util.math.MathHelper;
 public class AlloyFurnaceScreen extends HandledScreen<AlloyFurnaceScreenHandler> {
     private static final Identifier TEXTURE = Identifier.of("subterra", "textures/gui/container/alloy_furnace.png");
     private final Identifier LIT_PROGRESS_TEXTURE = Identifier.ofVanilla("container/blast_furnace/lit_progress");
-    private final Identifier BURN_PROGRESS_TEXTRUE = Identifier.ofVanilla("container/blast_furnace/burn_progress");
+    private final Identifier BURN_PROGRESS_TEXTURE = Identifier.ofVanilla("container/blast_furnace/burn_progress");
 
     public AlloyFurnaceScreen(AlloyFurnaceScreenHandler screenHandler, PlayerInventory inventory, Text title){
         super(screenHandler, inventory, title);
@@ -42,7 +42,7 @@ public class AlloyFurnaceScreen extends HandledScreen<AlloyFurnaceScreenHandler>
 
         k = true;
         l = MathHelper.ceil(((AlloyFurnaceScreenHandler)this.handler).getCookProgress() * 24.0F);
-        drawContext.drawGuiTexture(this.BURN_PROGRESS_TEXTRUE, 24, 16, 0, 0, i + 79, j + 34, l, 16);
+        drawContext.drawGuiTexture(this.BURN_PROGRESS_TEXTURE, 24, 16, 0, 0, i + 79, j + 34, l, 16);
     }
 
     @Override

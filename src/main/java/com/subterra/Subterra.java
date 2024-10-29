@@ -45,9 +45,8 @@ public class Subterra implements ModInitializer {
 							entries.add(ModBlocks.CRYSLATE_TILES);
 							entries.add(ModBlocks.CRACKED_CRYSLATE_TILES);
 							entries.add(ModBlocks.CRYSLATE_PILLAR);
-							entries.add(ModBlocks.CRACKED_CRYSLATE_PILLAR);
-							entries.add(ModBlocks.CHISELED_CRYSLATE_BRICKS);
-							entries.add(ModBlocks.CRACKED_CHISELED_CRYSLATE_BRICKS);
+							entries.add(ModBlocks.CHISELED_CRYSLATE);
+							entries.add(ModBlocks.CRACKED_CHISELED_CRYSLATE);
 						}).build());
 		CustomPortalBuilder.beginPortal()
 				.frameBlock(Blocks.CRYING_OBSIDIAN)
