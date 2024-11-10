@@ -41,7 +41,7 @@ public class AlloyFurnaceBlockEntity extends LootableContainerBlockEntity
     int currentFuel;
     int maxFuel;
     int currentProgress;
-    int maxProgress = 400;
+    int maxProgress = 200;
     private DefaultedList<ItemStack> inventory;
 
     protected final PropertyDelegate propertyDelegate = new PropertyDelegate(){

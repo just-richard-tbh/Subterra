@@ -34,6 +34,7 @@ public class Subterra implements ModInitializer {
 				FabricItemGroup.builder().displayName(Text.translatable("itemgroup.subterra"))
 						.icon(() -> new ItemStack(ModBlocks.ALLOY_FURNACE_BLOCK.asItem())).entries((displayContext, entries) -> {
 							entries.add(ModBlocks.ALLOY_FURNACE_BLOCK);
+							entries.add(ModBlocks.STEEL_FURNACE);
 							entries.add(ModItems.STEEL_INGOT);
 							entries.add(ModItems.GRAPES);
 							entries.add(ModBlocks.CRYSLATE_BLOCK);

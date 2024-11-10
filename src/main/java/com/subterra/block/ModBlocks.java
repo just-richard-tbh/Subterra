@@ -102,6 +102,14 @@ public class ModBlocks {
             noCollision()
     );
 
+    public static final SteelFurnaceBlock STEEL_FURNACE = new SteelFurnaceBlock(AbstractBlock.Settings.create()
+            .mapColor(MapColor.DEEPSLATE_GRAY)
+            .strength(6.8F)
+            .resistance(20.0F)
+            .requiresTool()
+            .sounds(BlockSoundGroup.DEEPSLATE_TILES)
+    );
+
     private static void registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         Registry.register(Registries.BLOCK, Identifier.of("subterra", name), block);
@@ -127,5 +135,6 @@ public class ModBlocks {
         registerBlock("cracked_chiseled_cryslate_bricks", CRACKED_CHISELED_CRYSLATE);
         registerBlock("mantle_rock", MANTLE_BLOCK);
         registerBlock("grape_bush", GRAPE_BUSH);
+        registerBlock("steel_furnace", STEEL_FURNACE);
     }
 }

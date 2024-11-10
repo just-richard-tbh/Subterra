@@ -1,6 +1,7 @@
 {
   "item.subterra.steel_ingot": "Steel Ingot",
   "block.subterra.alloy_furnace": "Alloy Furnace",
+  "block.subterra.steel_furnace": "Steel Furnace",
   "block.subterra.cryslate": "Cryslate",
   "block.subterra.cobbled_cryslate": "Cobbled Cryslate",
   "block.subterra.cobbled_cryslate_slab": "Cobbled Cryslate Slab",
@@ -14,13 +15,11 @@
   "block.subterra.cracked_cryslate_brick_stairs": "Cracked Cryslate Brick Stairs",
   "block.subterra.cracked_cryslate_brick_wall": "Cracked Cryslate Brick Wall",
   "block.subterra.cryslate_tiles": "Cryslate Tiles",
-  "block.subterra.cracked_cryslate_tiles": "Cracked Cryslate Tiles",
   "block.subterra.cryslate_pillar": "Cryslate Pillar",
-  "block.subterra.cracked_cryslate_pillar": "Cracked Cryslate Pillar",
   "block.subterra.chiseled_cryslate": "Chiseled Cryslate",
-  "block.subterra.cracked_chiseled_cryslate": "Cracked Chiseled Cryslate",
 
   "container.alloy_furnace": "Alloy Furnace",
+  "container.steel_furnace": "Steel Furnace",
 
   "itemgroup.subterra": "Subterra"
 }
