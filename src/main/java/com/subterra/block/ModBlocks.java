@@ -1,6 +1,7 @@
 package com.subterra.block;
 
 import net.minecraft.block.*;
+import com.subterra.block.ArcFurnaceBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -108,6 +109,16 @@ public class ModBlocks {
             .resistance(20.0F)
             .requiresTool()
             .sounds(BlockSoundGroup.DEEPSLATE_TILES)
+            .luminance(createLightLevelFromLitBlockState(13))
+    );
+
+    public static final ArcFurnaceBlock ARC_FURNACE = new ArcFurnaceBlock(AbstractBlock.Settings.create()
+            .mapColor(MapColor.DEEPSLATE_GRAY)
+            .strength(6.8F)
+            .resistance(20.0F)
+            .requiresTool()
+            .sounds(BlockSoundGroup.DEEPSLATE_TILES)
+            .luminance(createLightLevelFromLitBlockState(13))
     );
 
     private static void registerBlock(String name, Block block) {
@@ -136,5 +147,6 @@ public class ModBlocks {
         registerBlock("mantle_rock", MANTLE_BLOCK);
         registerBlock("grape_bush", GRAPE_BUSH);
         registerBlock("steel_furnace", STEEL_FURNACE);
+        registerBlock("arc_furnace", ARC_FURNACE);
     }
 }

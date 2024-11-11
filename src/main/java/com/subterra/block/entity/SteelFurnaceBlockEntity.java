@@ -25,9 +25,8 @@ public class SteelFurnaceBlockEntity extends AbstractFastFurnaceBlockEntity {
     protected Text getContainerName() {
         return Text.translatable("container.steel_furnace");
     }
-
     protected int getFuelTime(ItemStack fuel) {
-        return super.getFuelTime(fuel) / 2;
+        return super.getFuelTime(fuel);
     }
 
     protected ScreenHandler createScreenHandler(int syncId, PlayerInventory playerInventory) {

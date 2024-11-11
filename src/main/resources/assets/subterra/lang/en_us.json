@@ -2,6 +2,7 @@
   "item.subterra.steel_ingot": "Steel Ingot",
   "block.subterra.alloy_furnace": "Alloy Furnace",
   "block.subterra.steel_furnace": "Steel Furnace",
+  "block.subterra.arc_furnace": "Arc Furnace",
   "block.subterra.cryslate": "Cryslate",
   "block.subterra.cobbled_cryslate": "Cobbled Cryslate",
   "block.subterra.cobbled_cryslate_slab": "Cobbled Cryslate Slab",
@@ -20,6 +21,7 @@
 
   "container.alloy_furnace": "Alloy Furnace",
   "container.steel_furnace": "Steel Furnace",
+  "container.arc_furnace": "Arc Furnace",
 
   "itemgroup.subterra": "Subterra"
 }

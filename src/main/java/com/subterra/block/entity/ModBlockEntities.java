@@ -6,20 +6,24 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-import static com.subterra.block.ModBlocks.ALLOY_FURNACE_BLOCK;
-import static com.subterra.block.ModBlocks.STEEL_FURNACE;
+import static com.subterra.block.ModBlocks.*;
 
 public class ModBlockEntities {
     public static BlockEntityType<AlloyFurnaceBlockEntity> ALLOY_FURNACE_BLOCK_ENTITY;
     public static BlockEntityType<SteelFurnaceBlockEntity> STEEL_FURNACE_BLOCK_ENTITY;
+    public static BlockEntityType<ArcFurnaceBlockEntity> ARC_FURNACE_BLOCK_ENTITY;
     public static void registerBlockEntityTypes() {
         ALLOY_FURNACE_BLOCK_ENTITY = Registry.register(
                 Registries.BLOCK_ENTITY_TYPE, Identifier.of(Subterra.MOD_ID, "alloy_furnace_be"),
                 BlockEntityType.Builder.create(AlloyFurnaceBlockEntity::new, ALLOY_FURNACE_BLOCK).build()
         );
         STEEL_FURNACE_BLOCK_ENTITY = Registry.register(
-                Registries.BLOCK_ENTITY_TYPE, Identifier.of(Subterra.MOD_ID, "alloy_furnace_be"),
+                Registries.BLOCK_ENTITY_TYPE, Identifier.of(Subterra.MOD_ID, "steel_furnace_be"),
                 BlockEntityType.Builder.create(SteelFurnaceBlockEntity::new, STEEL_FURNACE).build()
+        );
+        ARC_FURNACE_BLOCK_ENTITY = Registry.register(
+                Registries.BLOCK_ENTITY_TYPE, Identifier.of(Subterra.MOD_ID, "arc_furnace_be"),
+                BlockEntityType.Builder.create(ArcFurnaceBlockEntity::new, ARC_FURNACE).build()
         );
     }
 }

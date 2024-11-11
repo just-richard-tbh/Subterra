@@ -71,7 +71,6 @@ public abstract class AbstractFastFurnaceBlockEntity extends LockableContainerBl
     public static final int PROPERTY_COUNT = 4;
     public static final int DEFAULT_COOK_TIME = 200;
     public static final int field_31295 = 2;
-    public static final float SPEED = 1.5F;
     protected DefaultedList<ItemStack> inventory;
     int burnTime;
     int fuelTime;
@@ -81,7 +80,7 @@ public abstract class AbstractFastFurnaceBlockEntity extends LockableContainerBl
     private static volatile Map<Item, Integer> fuelTimes;
     protected final PropertyDelegate propertyDelegate;
     private final Object2IntOpenHashMap<Identifier> recipesUsed;
-    private final RecipeManager.MatchGetter<SingleStackRecipeInput, ? extends AbstractCookingRecipe> matchGetter;
+    final RecipeManager.MatchGetter<SingleStackRecipeInput, ? extends AbstractCookingRecipe> matchGetter;
 
     protected AbstractFastFurnaceBlockEntity(BlockEntityType<?> blockEntityType, BlockPos pos, BlockState state, RecipeType<? extends AbstractCookingRecipe> recipeType) {
         super(blockEntityType, pos, state);
@@ -306,14 +305,14 @@ public abstract class AbstractFastFurnaceBlockEntity extends LockableContainerBl
             return 0;
         } else {
             Item item = fuel.getItem();
-            return (Integer)createFuelTimeMap().getOrDefault(item, 0)/4;
+            return (Integer)createFuelTimeMap().getOrDefault(item, 0)/6;
         }
     }
 
     private static int getCookTime(World world, AbstractFastFurnaceBlockEntity furnace) {
         SingleStackRecipeInput singleStackRecipeInput = new SingleStackRecipeInput(furnace.getStack(0));
         return (Integer)furnace.matchGetter.getFirstMatch(singleStackRecipeInput, world).map((recipe) -> {
-            return Math.round(((AbstractCookingRecipe)recipe.value()).getCookingTime()/SPEED);
+            return Math.round(((AbstractCookingRecipe)recipe.value()).getCookingTime()/1.5F);
         }).orElse(200);
     }
 
