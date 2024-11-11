@@ -1,0 +1,9 @@
+{
+  "parent": "subterra:block/orientable_with_back",
+  "textures": {
+    "front": "subterra:block/arc_furnace_front",
+    "side": "subterra:block/arc_furnace_side",
+    "top": "subterra:block/arc_furnace_top",
+	"back": "subterra:block/arc_furnace_back_on"
+  }
+}

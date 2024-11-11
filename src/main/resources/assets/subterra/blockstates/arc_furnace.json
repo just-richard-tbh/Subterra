@@ -1,0 +1,63 @@
+{
+  "variants": {
+    "facing=east,lit=false,powered=false": {
+      "model": "subterra:block/arc_furnace_unpowered",
+      "y": 90
+    },
+    "facing=north,lit=false,powered=false": {
+      "model": "subterra:block/arc_furnace_unpowered"
+    },
+    "facing=south,lit=false,powered=false": {
+      "model": "subterra:block/arc_furnace_unpowered",
+      "y": 180
+    },
+    "facing=west,lit=false,powered=false": {
+      "model": "subterra:block/arc_furnace_unpowered",
+      "y": 270
+    },"facing=east,lit=true,powered=false": {
+      "model": "subterra:block/arc_furnace_unpowered",
+      "y": 90
+    },
+    "facing=north,lit=true,powered=false": {
+      "model": "subterra:block/arc_furnace_unpowered"
+    },
+    "facing=south,lit=true,powered=false": {
+      "model": "subterra:block/arc_furnace_unpowered",
+      "y": 180
+    },
+    "facing=west,lit=true,powered=false": {
+      "model": "subterra:block/arc_furnace_unpowered",
+      "y": 270
+    },
+	"facing=east,lit=false,powered=true": {
+      "model": "subterra:block/arc_furnace_powered",
+      "y": 90
+    },
+    "facing=east,lit=true,powered=true": {
+      "model": "subterra:block/arc_furnace_powered_on",
+      "y": 90
+    },
+    "facing=north,lit=false,powered=true": {
+      "model": "subterra:block/arc_furnace_powered"
+    },
+    "facing=north,lit=true,powered=true": {
+      "model": "subterra:block/arc_furnace_powered_on"
+    },
+    "facing=south,lit=false,powered=true": {
+      "model": "subterra:block/arc_furnace_powered",
+      "y": 180
+    },
+    "facing=south,lit=true,powered=true": {
+      "model": "subterra:block/arc_furnace_powered_on",
+      "y": 180
+    },
+    "facing=west,lit=false,powered=true": {
+      "model": "subterra:block/arc_furnace_powered",
+      "y": 270
+    },
+    "facing=west,lit=true,powered=true": {
+      "model": "subterra:block/arc_furnace_powered_on",
+      "y": 270
+    }
+  }
+}

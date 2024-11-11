@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "subterra:block/arc_furnace_front",
+    "side": "subterra:block/arc_furnace_side",
+    "top": "subterra:block/arc_furnace_top"
+  }
+}
