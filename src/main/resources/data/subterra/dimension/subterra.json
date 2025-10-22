@@ -31,22 +31,7 @@
             "weirdness": 0,
             "depth": [
               -0.5,
-              0.5
-            ],
-            "offset": 0
-          }
-        },
-        {
-          "biome": "subterra:core",
-          "parameters": {
-            "temperature": 0,
-            "humidity": 0,
-            "continentalness": 0,
-            "erosion": 0,
-            "weirdness": 0,
-            "depth": [
-              1.0,
-              2.0
+              0.4
             ],
             "offset": 0
           }
@@ -60,8 +45,38 @@
             "erosion": 0,
             "weirdness": 0,
             "depth": [
-              0.5,
-              1.0
+              0.4,
+              0.99
+            ],
+            "offset": 0
+          }
+        },
+        {
+          "biome": "subterra:core",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": [
+              0.99,
+              1.95
+            ],
+            "offset": 0
+          }
+        },
+        {
+          "biome": "subterra:rift",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": [
+              1.95,
+              2.0
             ],
             "offset": 0
           }

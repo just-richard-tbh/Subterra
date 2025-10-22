@@ -49,6 +49,7 @@ public class Subterra implements ModInitializer {
 							entries.add(ModBlocks.CRYSLATE_PILLAR);
 							entries.add(ModBlocks.CHISELED_CRYSLATE);
 							entries.add(ModBlocks.CRACKED_CHISELED_CRYSLATE);
+							entries.add(ModBlocks.MANTLE_BLOCK);
 						}).build());
 		CustomPortalBuilder.beginPortal()
 				.frameBlock(Blocks.CRYING_OBSIDIAN)
@@ -57,6 +58,6 @@ public class Subterra implements ModInitializer {
 				.registerPortal();
 
 
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("Subterra initialized");
 	}
 }

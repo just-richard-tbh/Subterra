@@ -144,7 +144,18 @@
                           "argument2": {
                             "type": "minecraft:add",
                             "argument1": -1,
-                            "argument2": "minecraft:nether/base_3d_noise"
+                            "argument2": {
+                              "type": "minecraft:add",
+                              "argument1": 0.05,
+                              "argument2": {
+                                "type": "minecraft:old_blended_noise",
+                                "xz_scale": 0.5,
+                                "y_scale": 1,
+                                "xz_factor": 80,
+                                "y_factor": 60,
+                                "smear_scale_multiplier": 8
+                              }
+                            }
                           }
                         }
                       }
@@ -193,8 +204,15 @@
                           },
                           "argument2": {
                             "type": "minecraft:add",
-                            "argument1": -1,
-                            "argument2": "minecraft:nether/base_3d_noise"
+                            "argument1": -0.9,
+                            "argument2": {
+                              "type": "minecraft:old_blended_noise",
+                              "xz_scale": 8,
+                              "y_scale": 32,
+                              "xz_factor": 1,
+                              "y_factor": 2,
+                              "smear_scale_multiplier": 8
+                            }
                           }
                         }
                       }
@@ -297,7 +315,7 @@
         "then_run": {
           "type": "minecraft:block",
           "result_state": {
-            "Name": "minecraft:obsidian"
+            "Name": "subterra:cryslate"
           }
         }
       },
@@ -312,7 +330,22 @@
         "then_run": {
           "type": "minecraft:block",
           "result_state": {
-            "Name": "minecraft:end_stone"
+            "Name": "subterra:mantle_rock"
+          }
+        }
+      },
+      {
+        "type": "minecraft:condition",
+        "if_true": {
+          "type": "minecraft:biome",
+          "biome_is": [
+            "subterra:rift"
+          ]
+        },
+        "then_run": {
+          "type": "minecraft:block",
+          "result_state": {
+            "Name": "subterra:obsidian"
           }
         }
       }
