@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "subterra:block/cobbled_cryslate",
+    "side": "subterra:block/cobbled_cryslate",
+    "top": "subterra:block/cobbled_cryslate"
+  }
+}

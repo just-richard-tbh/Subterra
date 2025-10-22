@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "subterra:block/cobbled_cryslate",
+    "side": "subterra:block/cobbled_cryslate",
+    "top": "subterra:block/cobbled_cryslate"
+  }
+}

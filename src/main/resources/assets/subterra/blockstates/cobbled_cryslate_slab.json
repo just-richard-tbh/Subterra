@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "subterra:block/cobbled_cryslate_slab"
+    },
+    "type=double": {
+      "model": "subterra:block/cobbled_cryslate"
+    },
+    "type=top": {
+      "model": "subterra:block/cobbled_cryslate_slab_top"
+    }
+  }
+}
