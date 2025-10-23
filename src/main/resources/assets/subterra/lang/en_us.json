@@ -24,5 +24,6 @@
   "container.steel_furnace": "Steel Furnace",
   "container.arc_furnace": "Arc Furnace",
 
-  "itemgroup.subterra": "Subterra"
+  "itemgroup.subterra": "Subterra",
+  "container.crucible_heater": "Crucible Heater"
 }

@@ -1,10 +1,12 @@
 package com.subterra.block.entity;
 
 import com.subterra.Subterra;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
 
 import static com.subterra.block.ModBlocks.*;
 
@@ -28,7 +30,7 @@ public class ModBlockEntities {
         );
         CRUCIBLE_HEATER_BLOCK_ENTITY = Registry.register(
                 Registries.BLOCK_ENTITY_TYPE, Identifier.of(Subterra.MOD_ID, "crucible_heater_be"),
-                BlockEntityType.Builder.create(CrucibleHeaterBlockEntity::new, CRUCIBLE_HEATER).build()
+                BlockEntityType.Builder.create((BlockPos blockPos, BlockState blockState) -> new CrucibleHeaterBlockEntity(blockPos, blockState), CRUCIBLE_HEATER).build()
         );
     }
 }

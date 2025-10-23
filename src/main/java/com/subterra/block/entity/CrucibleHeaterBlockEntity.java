@@ -1,6 +1,5 @@
 package com.subterra.block.entity;
 
-import com.subterra.block.ArcFurnaceBlock;
 import com.subterra.block.CrucibleHeaterBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.LootableContainerBlockEntity;
@@ -9,10 +8,10 @@ import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.SidedInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
@@ -21,19 +20,49 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import static com.subterra.block.CrucibleHeaterBlock.LIT;
-import static com.subterra.block.CrucibleHeaterBlock.POWERED;
-
-import java.util.List;
 
 import static net.minecraft.block.entity.AbstractFurnaceBlockEntity.createFuelTimeMap;
 
 public class CrucibleHeaterBlockEntity extends LootableContainerBlockEntity implements ImplementedInventory, SidedInventory, NamedScreenHandlerFactory {
     int currentFuel;
     int maxFuel;
-    private DefaultedList<ItemStack> inventory;
+    int isPowered;
+    protected DefaultedList<ItemStack> inventory;
+    protected final PropertyDelegate propertyDelegate;
 
     public CrucibleHeaterBlockEntity(BlockPos blockPos, BlockState blockState) {
         super(ModBlockEntities.CRUCIBLE_HEATER_BLOCK_ENTITY, blockPos, blockState);
+        this.propertyDelegate = new PropertyDelegate() {
+            @Override
+            public int get(int index) {
+                switch (index) {
+                    case 0 -> {
+                        return  CrucibleHeaterBlockEntity.this.currentFuel;
+                    }
+                    case 1 -> {
+                        return  CrucibleHeaterBlockEntity.this.maxFuel;
+                    }
+                    case 2 -> {
+                        return  CrucibleHeaterBlockEntity.this.isPowered;
+                    }
+                    default -> {
+                        return 0;
+                    }
+                }
+            }
+
+            @Override
+            public void set(int index, int value) {
+                switch (index) {
+                    case 0 -> CrucibleHeaterBlockEntity.this.currentFuel = value;
+                    case 1 -> CrucibleHeaterBlockEntity.this.maxFuel = value;
+                    case 2 -> CrucibleHeaterBlockEntity.this.isPowered = value;
+                }
+            }
+
+            @Override
+            public int size() { return 3; }
+        };
         this.inventory = DefaultedList.ofSize(1, ItemStack.EMPTY);
     }
 
@@ -61,17 +90,17 @@ public class CrucibleHeaterBlockEntity extends LootableContainerBlockEntity impl
 
     @Override
     protected Text getContainerName() {
-        return null;
+        return Text.translatable("container.crucible_heater");
     }
 
     @Override
     protected DefaultedList<ItemStack> getHeldStacks() {
-        return null;
+        return this.inventory;
     }
 
     @Override
     protected void setHeldStacks(DefaultedList<ItemStack> inventory) {
-
+        this.inventory = inventory;
     }
 
     protected int getFuelTime(ItemStack fuel) {
@@ -104,6 +133,11 @@ public class CrucibleHeaterBlockEntity extends LootableContainerBlockEntity impl
 
     public static void tick(World world, BlockPos blockPos, BlockState blockState, CrucibleHeaterBlockEntity blockEntity) {
         boolean hasPower = blockEntity.getCachedState().get(CrucibleHeaterBlock.POWERED);
+        if (hasPower){
+            blockEntity.isPowered = 1;
+        } else {
+            blockEntity.isPowered = 0;
+        }
         if (!hasPower && blockEntity.currentFuel >= 0){
             blockEntity.currentFuel = blockEntity.maxFuel = blockEntity.getFuelTime(blockEntity.inventory.get(0));
             blockEntity.inventory.get(0).decrement(1);

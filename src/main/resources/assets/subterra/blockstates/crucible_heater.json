@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "lit=false,powered=true": {
+      "model": "subterra:block/crucible_heater_locked"
+    },
+    "lit=true,powered=false": {
+      "model": "subterra:block/crucible_heater_on"
+    },
+    "lit=true,powered=true": {
+      "model": "subterra:block/crucible_heater_on_locked"
+    },
+    "lit=false,powered=false": {
+      "model": "subterra:block/crucible_heater"
+    }
+  }
+}

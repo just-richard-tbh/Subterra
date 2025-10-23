@@ -57,7 +57,7 @@ public class Subterra implements ModInitializer {
 				.destDimID(Identifier.of("subterra", "subterra"))
 				.lightWithFluid(Fluids.LAVA)
                 .tintColor(100, 20, 80)
-                .setPortalSearchYRange(200, 320)
+                .setPortalSearchYRange(200, 290)
 				.registerPortal();
 
 		LOGGER.info("Subterra initialized");
