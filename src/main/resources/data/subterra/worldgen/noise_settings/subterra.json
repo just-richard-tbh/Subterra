@@ -345,7 +345,7 @@
         "then_run": {
           "type": "minecraft:block",
           "result_state": {
-            "Name": "subterra:obsidian"
+            "Name": "minecraft:obsidian"
           }
         }
       }

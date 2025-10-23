@@ -35,6 +35,7 @@ public class Subterra implements ModInitializer {
 						.icon(() -> new ItemStack(ModBlocks.ALLOY_FURNACE_BLOCK.asItem())).entries((displayContext, entries) -> {
 							entries.add(ModBlocks.ALLOY_FURNACE_BLOCK);
 							entries.add(ModBlocks.STEEL_FURNACE);
+							entries.add(ModBlocks.CRUCIBLE_HEATER);
 							entries.add(ModBlocks.ARC_FURNACE);
 							entries.add(ModItems.STEEL_INGOT);
 							entries.add(ModItems.GRAPES);
@@ -52,11 +53,12 @@ public class Subterra implements ModInitializer {
 							entries.add(ModBlocks.MANTLE_BLOCK);
 						}).build());
 		CustomPortalBuilder.beginPortal()
-				.frameBlock(Blocks.CRYING_OBSIDIAN)
+				.frameBlock(Blocks.DEEPSLATE_TILES)
 				.destDimID(Identifier.of("subterra", "subterra"))
 				.lightWithFluid(Fluids.LAVA)
+                .tintColor(100, 20, 80)
+                .setPortalSearchYRange(200, 320)
 				.registerPortal();
-
 
 		LOGGER.info("Subterra initialized");
 	}

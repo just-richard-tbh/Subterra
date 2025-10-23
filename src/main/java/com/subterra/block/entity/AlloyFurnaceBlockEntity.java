@@ -1,6 +1,5 @@
 package com.subterra.block.entity;
 
-import com.google.common.collect.Maps;
 import com.subterra.item.ModItems;
 import com.subterra.screen.AlloyFurnaceScreenHandler;
 import net.minecraft.block.BlockState;
@@ -22,7 +21,6 @@ import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.*;

@@ -12,6 +12,7 @@ public class ModBlockEntities {
     public static BlockEntityType<AlloyFurnaceBlockEntity> ALLOY_FURNACE_BLOCK_ENTITY;
     public static BlockEntityType<SteelFurnaceBlockEntity> STEEL_FURNACE_BLOCK_ENTITY;
     public static BlockEntityType<ArcFurnaceBlockEntity> ARC_FURNACE_BLOCK_ENTITY;
+    public static BlockEntityType<CrucibleHeaterBlockEntity> CRUCIBLE_HEATER_BLOCK_ENTITY;
     public static void registerBlockEntityTypes() {
         ALLOY_FURNACE_BLOCK_ENTITY = Registry.register(
                 Registries.BLOCK_ENTITY_TYPE, Identifier.of(Subterra.MOD_ID, "alloy_furnace_be"),
@@ -24,6 +25,10 @@ public class ModBlockEntities {
         ARC_FURNACE_BLOCK_ENTITY = Registry.register(
                 Registries.BLOCK_ENTITY_TYPE, Identifier.of(Subterra.MOD_ID, "arc_furnace_be"),
                 BlockEntityType.Builder.create(ArcFurnaceBlockEntity::new, ARC_FURNACE).build()
+        );
+        CRUCIBLE_HEATER_BLOCK_ENTITY = Registry.register(
+                Registries.BLOCK_ENTITY_TYPE, Identifier.of(Subterra.MOD_ID, "crucible_heater_be"),
+                BlockEntityType.Builder.create(CrucibleHeaterBlockEntity::new, CRUCIBLE_HEATER).build()
         );
     }
 }

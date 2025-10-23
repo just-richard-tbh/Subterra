@@ -112,6 +112,14 @@ public class ModBlocks {
             .luminance(createLightLevelFromLitBlockState(13))
     );
 
+    public static final CrucibleHeaterBlock CRUCIBLE_HEATER = new CrucibleHeaterBlock(AbstractBlock.Settings.create()
+            .mapColor(MapColor.DEEPSLATE_GRAY)
+            .strength(3.5F)
+            .requiresTool()
+            .sounds(BlockSoundGroup.DEEPSLATE_TILES)
+            .luminance(createLightLevelFromLitBlockState(7))
+    );
+
     public static final ArcFurnaceBlock ARC_FURNACE = new ArcFurnaceBlock(AbstractBlock.Settings.create()
             .mapColor(MapColor.DEEPSLATE_GRAY)
             .strength(6.8F)
@@ -147,6 +155,7 @@ public class ModBlocks {
         registerBlock("mantle_rock", MANTLE_BLOCK);
         registerBlock("grape_bush", GRAPE_BUSH);
         registerBlock("steel_furnace", STEEL_FURNACE);
+        registerBlock("crucible_heater", CRUCIBLE_HEATER);
         registerBlock("arc_furnace", ARC_FURNACE);
     }
 }
